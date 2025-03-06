@@ -1,0 +1,7 @@
+boto3  # Helps Python talk to AWS services like cloud storage and databases  
+awscli  # A command-line tool to control AWS without using the website  
+pypdf  # Works with PDFs—lets you read, split, and merge them using Python  
+langchain  # A toolkit for making smart chatbots and AI-powered apps  
+faiss-cpu  # A super-fast search tool for finding similar things in big data  
+streamlit  # Turns Python scripts into easy-to-use web apps  
+langchain-community  # Community-maintained integrations for tools, document loaders etc
