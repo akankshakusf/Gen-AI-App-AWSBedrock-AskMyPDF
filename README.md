@@ -1,0 +1,1 @@
+# Gen-AI-App-AWSBedrock-AskMyPDF
