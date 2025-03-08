@@ -1,46 +1,51 @@
-# AskMyPDF with AWS Bedrock
+# 🌍 AskMyPDF with AWS Bedrock 🚀
 
-## Overview
-AskMyPDF is a powerful document-based Q&A system built using **AWS Bedrock**, **LangChain**, **FAISS**, and **Streamlit**. It allows users to query a set of PDF documents and receive intelligent responses from **Claude** and **Llama 3** models, leveraging Amazon Bedrock for inference.
+https://gen-ai-app-awsbedrock-askmypdf-gmgzapiekszkkdo5bn7vva.streamlit.app/
 
-The project implements **Retrieval-Augmented Generation (RAG)** to enhance the accuracy of responses by grounding LLM outputs in retrieved document knowledge.
+## 📌 Overview
+**AskMyPDF** is an AI-powered document-based Q&A system leveraging **Amazon Bedrock**, **LangChain**, **FAISS**, and **Streamlit**. It enables users to extract insights from PDF documents using **Claude** and **Llama 3** models with Amazon Bedrock inference.
 
-## Features
-- **RAG-based Question Answering**: Uses FAISS vector retrieval to enhance LLM responses.
-- **Multi-Model Support**: Claude and Llama 3 models via AWS Bedrock.
-- **Efficient Caching**: Avoids redundant API calls with session-based caching.
-- **Dynamic PDF Processing**: Ingest and vectorize PDF content for efficient retrieval.
-- **Scalable & Extensible**: Businesses can add their own logic and customizations.
-- 
-## How It Works
-### Data Ingestion & Vectorization
-- PDF documents are loaded using `PyPDFDirectoryLoader`.
-- Documents are chunked and embedded using Amazon Titan Embeddings (`amazon.titan-embed-text-v1`).
-- FAISS stores embeddings locally for efficient retrieval.
+> 🔥 **Why is this important?** This project implements **Retrieval-Augmented Generation (RAG)** to enhance LLM responses by grounding answers in **retrieved document knowledge** for higher accuracy.
 
-### Query Processing
-- User queries trigger a similarity search against the FAISS index.
-- The retrieved context is passed to the LLM using a structured prompt.
-- The response is generated and cached to avoid redundant API calls.
+## 🌟 Features
+✅ **RAG-based Question Answering** - Enhances LLM responses with document knowledge.  
+✅ **Multi-Model Support** - Query Claude and Llama 3 seamlessly.  
+✅ **Efficient Caching** - Reduces redundant API calls, improving performance.  
+✅ **Dynamic PDF Processing** - Automatically ingest and vectorize PDFs for retrieval.  
+✅ **Scalable & Extensible** - Businesses can integrate their own logic & domain-specific models.
 
-## Business Use Cases & Customization
-### **How Businesses Can Integrate Their Logic**
-1. **Domain-Specific Tuning**: Replace `amazon.titan-embed-text-v1` with a custom embedding model trained on domain-specific data.
-2. **Enterprise Data Sources**: Extend document ingestion to include data from SQL, NoSQL, or cloud storage (e.g., S3, SharePoint, or Google Drive).
-3. **Hybrid Search**: Combine FAISS with keyword-based search for better context retrieval.
-4. **Model Selection**: Choose from Amazon Bedrock-supported models based on response quality and cost-effectiveness.
-5. **Custom Response Formatting**: Modify prompt templates for structured responses like summaries, reports, or bullet points.
+## 🛠️ How It Works
+### 📥 Data Ingestion & Vectorization
+- 📂 PDF documents are loaded using `PyPDFDirectoryLoader`.
+- 🔄 Documents are chunked & embedded using **Amazon Titan Embeddings (`amazon.titan-embed-text-v1`)**.
+- 📊 FAISS stores embeddings for fast and efficient similarity-based retrieval.
 
-### **Leveraging RAG for Business Applications**
-Retrieval-Augmented Generation (RAG) is key for enhancing LLMs with real-world, up-to-date knowledge. Businesses can:
-- **Improve chatbot responses**: Build customer support bots grounded in company documentation.
-- **Boost compliance & legal research**: Extract precise regulatory insights from legal texts.
-- **Enhance enterprise search**: Empower employees to query internal knowledge bases.
-- **Optimize financial reporting**: Summarize quarterly reports using dynamic data retrieval.
+### 🔍 Query Processing
+1️⃣ User enters a query.  
+2️⃣ FAISS searches for the most relevant document snippets.  
+3️⃣ Retrieved context is sent to **Claude/Llama 3** via Amazon Bedrock.  
+4️⃣ Response is generated & displayed to the user.  
 
-## Future Enhancements
-- Add support for **multi-turn conversational memory**.
-- Integrate **real-time API data retrieval** for live updates.
-- Implement **fine-tuning** options for domain-specific LLMs.
-- Enable **user authentication & access control** for enterprise use.
+---
 
+## 🏢 Business Use Cases & Customization
+### ✨ **How Businesses Can Integrate Their Logic**
+🔹 **Domain-Specific Tuning**: Use custom embeddings trained on company data.  
+🔹 **Enterprise Data Sources**: Extend PDF ingestion to include SQL, NoSQL, or S3 storage.  
+🔹 **Hybrid Search**: Combine FAISS retrieval with keyword search for better accuracy.  
+🔹 **Model Selection**: Pick an optimal Amazon Bedrock model based on cost & performance.  
+🔹 **Custom Response Formatting**: Modify prompts for structured outputs (e.g., reports, summaries).  
+
+### 💡 **Leveraging RAG for Business Applications**
+📌 **Enhancing Chatbot Responses**: Power AI-driven customer support bots.  
+📌 **Legal & Compliance Research**: Extract key insights from legal documents.  
+📌 **Enterprise Knowledge Retrieval**: Enable employees to query internal documentation.  
+📌 **Automated Financial Reporting**: Summarize financial reports using dynamic RAG retrieval.  
+
+---
+
+## 🔮 Future Enhancements
+✨ Add **multi-turn conversational memory** for better context retention.  
+✨ Integrate **real-time API data retrieval** for continuous updates.  
+✨ Implement **fine-tuning options** for domain-specific LLMs.  
+✨ Enable **user authentication & role-based access** for enterprises.  
