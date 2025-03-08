@@ -1,6 +1,6 @@
 # 🌍 AskMyPDF with AWS Bedrock 🚀
 
-https://gen-ai-app-awsbedrock-askmypdf-gmgzapiekszkkdo5bn7vva.streamlit.app/
+App link- https://gen-ai-app-awsbedrock-askmypdf-gmgzapiekszkkdo5bn7vva.streamlit.app/
 
 ## 📌 Overview
 **AskMyPDF** is an AI-powered document-based Q&A system leveraging **Amazon Bedrock**, **LangChain**, **FAISS**, and **Streamlit**. It enables users to extract insights from PDF documents using **Claude** and **Llama 3** models with Amazon Bedrock inference.
