@@ -12,8 +12,18 @@ from langchain.vectorstores import FAISS
 from langchain.prompts import PromptTemplate
 from langchain.chains import RetrievalQA
 
-## Bedrock Clients call
-bedrock = boto3.client(service_name="bedrock-runtime",region_name="us-east-1")
+
+# Retrieve AWS credentials from Streamlit secrets
+aws_access_key = st.secrets["AWS_ACCESS_KEY_ID"]
+aws_secret_key = st.secrets["AWS_SECRET_ACCESS_KEY"]
+
+# Initialize the Bedrock client with credentials
+bedrock = boto3.client(
+    service_name="bedrock-runtime",
+    region_name="us-east-1",
+    aws_access_key_id=aws_access_key,
+    aws_secret_access_key=aws_secret_key
+)
 
 # Initialize embedding from Amazon
 bedrock_embeddings = BedrockEmbeddings(model_id="amazon.titan-embed-text-v1", client=bedrock)
